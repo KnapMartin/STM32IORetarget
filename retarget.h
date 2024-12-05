@@ -9,17 +9,17 @@
 #define INC_RETARGET_H_
 
 
-#include <stdint.h>
+#define RTRGT_MAX_DELAY 100 // ms
 
 struct UART_HandleTypeDef;
-
-#define RTRGT_MAX_DELAY 100 // ms
+int _write(int file, char *data, int len);
+int _read(int file, char *data, int len);
 
 static UART_HandleTypeDef *s_huart = NULL;
 static HAL_StatusTypeDef (*s_tx_func)(UART_HandleTypeDef *huart,
         const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-static HAL_StatusTypeDef (*s_rx_func)(UART_HandleTypeDef *huart, uint8_t *pData,
-        uint16_t Size, uint32_t Timeout);
+static HAL_StatusTypeDef (*s_rx_func)(UART_HandleTypeDef *huart,
+	uint8_t *pData, uint16_t Size, uint32_t Timeout);
 
 void RTRGT_init(UART_HandleTypeDef *huart)
 {
