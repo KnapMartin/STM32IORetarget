@@ -13,7 +13,7 @@ RTRGT_init(&huart2);
 RTRGT_set_tx_function(HAL_UART_Transmit);
 ```
 
-* Pass your receive function (e.g. HAL polling transmit function)
+* Pass your receive function (e.g. HAL polling receive function)
 ```
 RTRGT_set_rx_function(HAL_UART_Receive);
 ```
