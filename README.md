@@ -3,10 +3,10 @@ STM32 read and write system call implementations for printf(), puts(), scanf() a
 
 # Usage
 
-* Pass UART handler to init function
+* Pass UART handler to init function \
 RTRGT_init(&huart2);
 
-* Pass your transmit function (e.g. HAL polling transmit function)
+* Pass your transmit function (e.g. HAL polling transmit function) \
 RTRGT_set_tx_function(HAL_UART_Transmit);
 
 * Pass your receive function (e.g. HAL polling transmit function) \
