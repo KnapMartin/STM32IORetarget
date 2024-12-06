@@ -12,8 +12,6 @@
 #define RTRGT_MAX_DELAY 100 // ms
 
 struct UART_HandleTypeDef;
-int _write(int file, char *data, int len);
-int _read(int file, char *data, int len);
 
 static UART_HandleTypeDef *s_huart = NULL;
 static HAL_StatusTypeDef (*s_tx_func)(UART_HandleTypeDef *huart,
